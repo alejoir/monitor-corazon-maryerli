@@ -2,12 +2,12 @@ const mensajes = {
     inicio: [
         "Sistema iniciado. Escaneando señales... Se detecta una presencia especial en el canal prioritario.",
         "Monitoreo activado. La calidad de la señal es excepcionalmente clara.",
-        "Conexión establecida. Preparado para recibir e interpretar datos."
+        "Conexión establecida. Preparado para recibir e interpretar datos emocionales."
     ],
     frecuencia: [
         "Frecuencia analizada. Se observa un patrón interesante cada vez que esta persona está cerca.",
         "Ritmo detectado: variable, pero siempre más acelerado en su presencia.",
-        "La frecuencia responde de forma notable ante ciertas señales externas."
+        "La frecuencia cardíaca responde de forma notable ante ciertas señales externas..."
     ],
     saturacion: [
         "Saturación emocional elevada. Niveles de interés por encima del promedio habitual.",
@@ -83,23 +83,22 @@ function mensajeFinal() {
     mostrarMensaje(obtenerMensajeAleatorio(mensajes.final));
 }
 
-// Reacción de ella - copia al portapapeles
+// Función para la reacción de ella
 function enviarReaccion() {
     const texto = document.getElementById("reaccion").value.trim();
     const respuesta = document.getElementById("respuestaReaccion");
 
     if (texto === "") {
-        respuesta.innerText = "Escribe algo primero.";
+        respuesta.innerText = "Escribe algo primero para poder enviarlo.";
         respuesta.style.color = "#ff6b6b";
         return;
     }
 
-    // Copiar al portapapeles
-    navigator.clipboard.writeText(texto).then(() => {
-        respuesta.innerText = "✅ Texto copiado. Ahora pégaselo a Michael por WhatsApp o chat.";
-        respuesta.style.color = "#00ff9d";
-    }).catch(() => {
-        respuesta.innerText = "No se pudo copiar automáticamente. Copia el texto manualmente y envíaselo a Michael.";
-        respuesta.style.color = "#ffcc00";
-    });
+    respuesta.innerText = "¡Reacción registrada con éxito! Michael recibirá tu mensaje. Gracias por interactuar.";
+    respuesta.style.color = "#00ff9d";
+    
+    // Limpiamos el cuadro después de un momento
+    setTimeout(() => {
+        document.getElementById("reaccion").value = "";
+    }, 2000);
 }
