@@ -46,13 +46,21 @@
             <button onclick="iniciarMonitoreo()">Iniciar Monitoreo</button>
             <button onclick="medirFrecuencia()">Analizar Frecuencia Cardíaca</button>
             <button onclick="medirSaturacion()">Medir Saturación Emocional</button>
-            <button onclick="transmitirSenal()">Transmitir Señal de Amor</button>
+            <button onclick="transmitirSenal()">Transmitir Señal</button>
             <button onclick="calcularDistancia()">Calcular Próximo Destino</button>
-            <button class="final-btn" onclick="mensajeFinal()">Mensaje Final del Ingeniero</button>
+            <button class="final-btn" onclick="mensajeFinal()">Mensaje del Ingeniero</button>
+        </div>
+
+        <!-- Nueva sección para que ella deje su reacción -->
+        <div class="reaccion-box">
+            <div class="reaccion-title">Deja tu reacción aquí</div>
+            <textarea id="reaccion" placeholder="¿Qué te pareció este monitor? Escribe lo que quieras..."></textarea>
+            <button class="reaccion-btn" onclick="enviarReaccion()">Enviar reacción</button>
+            <p id="respuestaReaccion"></p>
         </div>
 
         <div class="footer">
-            Sistema de Telecomunicaciones Emocionales v1.0 • Transmisión segura y prioritaria
+            Sistema de Telecomunicaciones Emocionales v1.1 • Transmisión prioritaria
         </div>
     </div>
 
