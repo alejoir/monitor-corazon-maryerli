@@ -1,16 +1,38 @@
-const messages = {
-    inicio: "Sistema iniciado. Detectando señales biométricas de Maryerli Christina... Conexión emocional establecida con éxito.",
-    
-    frecuencia: "Frecuencia cardíaca analizada. Se detecta un ritmo irregular cada vez que pienso en ti. Mi corazón transmite a 128 lpm cuando estás cerca... y no piensa bajar.",
-    
-    saturacion: "Saturación emocional: 98%. Niveles de dopamina y oxitocina extremadamente elevados. Diagnóstico: Estoy profundamente enamorado de ti, Maryerli.",
-    
-    senal: "Transmitiendo señal de amor en frecuencia prioritaria...\n\nMensaje recibido: 'Desde el primer día supe que quería recorrer el mundo contigo'. Señal modulada con cariño y amplificada por completo.",
-    
-    destino: "Calculando próximo destino conjunto...\n\nCoordenadas detectadas: Cualquier lugar del mundo está bien... siempre y cuando sea a tu lado. Prioridad máxima: Viajar juntos.",
-    
-    final: "Maryerli Christina,\n\nNo soy médico, pero como ingeniero en telecomunicaciones puedo asegurarte algo: la señal que generas en mí es la más fuerte, clara y hermosa que he recibido en mi vida.\n\nQuiero ser el hombre que viaje contigo, que te apoye en tus noches de estudio y turnos, y que construya una vida a tu lado.\n\nEsta transmisión no tiene fecha de caducidad.\n\nCon todo mi corazón,\nMichael Alejandro"
+const mensajes = {
+    inicio: [
+        "Sistema iniciado. Escaneando señales... Se detecta una presencia especial en el canal prioritario.",
+        "Monitoreo activado. La calidad de la señal es excepcionalmente clara.",
+        "Conexión establecida. Preparado para recibir e interpretar datos emocionales."
+    ],
+    frecuencia: [
+        "Frecuencia analizada. Se observa un patrón interesante cada vez que esta persona está cerca.",
+        "Ritmo detectado: variable, pero siempre más acelerado en su presencia.",
+        "La frecuencia cardíaca responde de forma notable ante ciertas señales externas..."
+    ],
+    saturacion: [
+        "Saturación emocional elevada. Niveles de interés por encima del promedio habitual.",
+        "Oxigenación óptima. El sistema registra una respuesta positiva ante esta interacción.",
+        "Valores de saturación estables y altos. Buena recepción de la señal."
+    ],
+    senal: [
+        "Transmitiendo en frecuencia prioritaria... Mensaje codificado con destino: Maryerli Christina.",
+        "Señal enviada correctamente. Esperando confirmación de recepción.",
+        "Modulación completada. La transmisión contiene datos de alta importancia personal."
+    ],
+    destino: [
+        "Calculando posibles destinos... Prioridad detectada: lugares nuevos, preferiblemente en compañía.",
+        "Coordenadas sugeridas: cualquier lugar del mapa, siempre que la compañía sea la adecuada.",
+        "Análisis de viaje: se recomienda compartir rutas, paisajes y momentos."
+    ],
+    final: [
+        "Maryerli Christina,\n\nComo ingeniero en telecomunicaciones puedo decirte que hay señales que simplemente destacan sobre el resto.\n\nEsta transmisión fue creada con la intención de que sepas que alguien valora mucho tu presencia.\n\nEspero que este pequeño sistema te haya sacado al menos una sonrisa.\n\nCon cariño,\nMichael Alejandro",
+        "Maryerli Christina,\n\nA veces las mejores conexiones no necesitan muchos decibelios, solo la persona correcta al otro lado.\n\nGracias por tomarte el tiempo de interactuar con este monitor.\n\nQue tengas un excelente día.\n\nMichael Alejandro"
+    ]
 };
+
+function obtenerMensajeAleatorio(lista) {
+    return lista[Math.floor(Math.random() * lista.length)];
+}
 
 function mostrarMensaje(texto) {
     const msg = document.getElementById("message");
@@ -19,7 +41,7 @@ function mostrarMensaje(texto) {
     setTimeout(() => {
         msg.innerText = texto;
         msg.style.opacity = 1;
-    }, 300);
+    }, 250);
 }
 
 function activarOnda() {
@@ -28,35 +50,55 @@ function activarOnda() {
 
 function iniciarMonitoreo() {
     activarOnda();
-    document.getElementById("hr").innerText = "86";
-    document.getElementById("spo2").innerText = "99";
-    document.getElementById("signal").innerText = "12";
-    mostrarMensaje(messages.inicio);
+    document.getElementById("hr").innerText = "82";
+    document.getElementById("spo2").innerText = "98";
+    document.getElementById("signal").innerText = "14";
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.inicio));
 }
 
 function medirFrecuencia() {
     activarOnda();
-    document.getElementById("hr").innerText = "128";
-    mostrarMensaje(messages.frecuencia);
+    document.getElementById("hr").innerText = Math.floor(Math.random() * 20) + 95;
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.frecuencia));
 }
 
 function medirSaturacion() {
-    document.getElementById("spo2").innerText = "98";
-    mostrarMensaje(messages.saturacion);
+    document.getElementById("spo2").innerText = Math.floor(Math.random() * 3) + 97;
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.saturacion));
 }
 
 function transmitirSenal() {
-    document.getElementById("signal").innerText = "24";
-    mostrarMensaje(messages.senal);
+    document.getElementById("signal").innerText = Math.floor(Math.random() * 10) + 18;
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.senal));
 }
 
 function calcularDistancia() {
-    mostrarMensaje(messages.destino);
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.destino));
 }
 
 function mensajeFinal() {
     document.getElementById("hr").innerText = "∞";
     document.getElementById("spo2").innerText = "100";
     document.getElementById("signal").innerText = "MAX";
-    mostrarMensaje(messages.final);
+    mostrarMensaje(obtenerMensajeAleatorio(mensajes.final));
+}
+
+// Función para la reacción de ella
+function enviarReaccion() {
+    const texto = document.getElementById("reaccion").value.trim();
+    const respuesta = document.getElementById("respuestaReaccion");
+
+    if (texto === "") {
+        respuesta.innerText = "Escribe algo primero para poder enviarlo.";
+        respuesta.style.color = "#ff6b6b";
+        return;
+    }
+
+    respuesta.innerText = "¡Reacción registrada con éxito! Michael recibirá tu mensaje. Gracias por interactuar.";
+    respuesta.style.color = "#00ff9d";
+    
+    // Limpiamos el cuadro después de un momento
+    setTimeout(() => {
+        document.getElementById("reaccion").value = "";
+    }, 2000);
 }
