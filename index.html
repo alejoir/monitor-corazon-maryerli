@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Signos Vitales - Maryerli Christina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="monitor">
+        <div class="header">
+            <div class="title">MONITOR DE SIGNOS VITALES DEL CORAZÓN</div>
+            <div class="patient">PACIENTE: MARYERLI CHRISTINA</div>
+            <div class="engineer">INGENIERO A CARGO: MICHAEL ALEJANDRO</div>
+        </div>
+
+        <div class="screen">
+            <div class="waveform" id="waveform">
+                <div class="line"></div>
+            </div>
+
+            <div class="vitals">
+                <div class="vital">
+                    <span class="label">FC</span>
+                    <span class="value" id="hr">--</span>
+                    <span class="unit">lpm</span>
+                </div>
+                <div class="vital">
+                    <span class="label">SpO₂</span>
+                    <span class="value" id="spo2">--</span>
+                    <span class="unit">%</span>
+                </div>
+                <div class="vital">
+                    <span class="label">SEÑAL</span>
+                    <span class="value" id="signal">--</span>
+                    <span class="unit">dB</span>
+                </div>
+            </div>
+
+            <div class="message-box" id="messageBox">
+                <p id="message">Sistema en espera... Presiona un botón para iniciar el monitoreo.</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="iniciarMonitoreo()">Iniciar Monitoreo</button>
+            <button onclick="medirFrecuencia()">Analizar Frecuencia Cardíaca</button>
+            <button onclick="medirSaturacion()">Medir Saturación Emocional</button>
+            <button onclick="transmitirSenal()">Transmitir Señal de Amor</button>
+            <button onclick="calcularDistancia()">Calcular Próximo Destino</button>
+            <button class="final-btn" onclick="mensajeFinal()">Mensaje Final del Ingeniero</button>
+        </div>
+
+        <div class="footer">
+            Sistema de Telecomunicaciones Emocionales v1.0 • Transmisión segura y prioritaria
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
