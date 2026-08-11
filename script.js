@@ -1,32 +1,33 @@
 const mensajes = {
     inicio: [
-        "Sistema iniciado. Escaneando señales... Se detecta una presencia especial en el canal prioritario.",
-        "Monitoreo activado. La calidad de la señal es excepcionalmente clara.",
-        "Conexión establecida. Preparado para recibir e interpretar datos."
+        "Sistema iniciado. Escaneando señales... Se detecta una presencia que no pasa desapercibida.",
+        "Monitoreo activado. La calidad de la señal es especialmente clara cuando se trata de ti.",
+        "Conexión establecida. Hay algo en esta frecuencia que captura toda mi atención."
     ],
     frecuencia: [
-        "Frecuencia analizada. Se observa un patrón interesante cada vez que esta persona está cerca.",
-        "Ritmo detectado: variable, pero siempre más acelerado en su presencia.",
-        "La frecuencia responde de forma notable ante ciertas señales externas."
+        "Frecuencia analizada. Mi ritmo cambia cada vez que estás cerca... y no es coincidencia.",
+        "Se detecta un aumento claro en la frecuencia cada vez que pienso en ti.",
+        "El corazón responde de forma distinta cuando la señal eres tú."
     ],
     saturacion: [
-        "Saturación emocional elevada. Niveles de interés por encima del promedio habitual.",
-        "Oxigenación óptima. El sistema registra una respuesta positiva ante esta interacción.",
-        "Valores de saturación estables y altos. Buena recepción de la señal."
+        "Saturación emocional muy elevada. Los niveles suben de forma notable en tu presencia.",
+        "Oxigenación óptima. El sistema registra una respuesta intensa y positiva hacia ti.",
+        "Valores altos y estables. Esta señal tiene un efecto bastante fuerte."
     ],
     senal: [
-        "Transmitiendo en frecuencia prioritaria... Mensaje codificado con destino: Maryerli Christina.",
-        "Señal enviada correctamente. Esperando confirmación de recepción.",
-        "Modulación completada. La transmisión contiene datos de alta importancia personal."
+        "Transmitiendo en frecuencia prioritaria... Destino: Maryerli Christina.\nMensaje enviado con especial cuidado.",
+        "Señal codificada y enviada. Contiene todo lo que no siempre sé cómo decirte en persona.",
+        "Modulación completada. Esta transmisión es solo para ti."
     ],
     destino: [
-        "Calculando posibles destinos... Prioridad detectada: lugares nuevos, preferiblemente en compañía.",
-        "Coordenadas sugeridas: cualquier lugar del mapa, siempre que la compañía sea la adecuada.",
-        "Análisis de viaje: se recomienda compartir rutas, paisajes y momentos."
+        "Calculando destinos posibles... Prioridad máxima: cualquier lugar, siempre que sea contigo.",
+        "Coordenadas detectadas: me da igual el destino, lo importante es compartir el viaje.",
+        "Análisis de viaje: se recomienda recorrer el mundo... pero a tu lado."
     ],
     final: [
-        "Maryerli Christina,\n\nComo ingeniero en telecomunicaciones puedo decirte que hay señales que simplemente destacan sobre el resto.\n\nEsta transmisión fue creada con la intención de que sepas que alguien valora mucho tu presencia.\n\nEspero que este pequeño sistema te haya sacado al menos una sonrisa.\n\nCon cariño,\nMichael Alejandro",
-        "Maryerli Christina,\n\nA veces las mejores conexiones no necesitan muchos decibelios, solo la persona correcta al otro lado.\n\nGracias por tomarte el tiempo de interactuar con este monitor.\n\nQue tengas un excelente día.\n\nMichael Alejandro"
+        "Maryerli Christina,\n\nHay señales que uno reconoce de inmediato, aunque no sepan explicarlas del todo.\n\nEsta página la hice pensando en ti. Quería que vieras un poco de lo que hago, y al mismo tiempo decirte que me gustas, que disfruto hablar contigo y que me encantaría seguir compartiendo momentos... y algún viaje juntos.\n\nEspero que te haya sacado una sonrisa.\n\nCon mucho cariño,\nMichael Alejandro",
+        
+        "Maryerli Christina,\n\nComo ingeniero puedo medir muchas cosas, pero hay una señal que no necesita instrumentos para notarse.\n\nGracias por existir y por el tiempo que compartimos. Me gustaría que este pequeño monitor te demuestre que hay alguien que te presta verdadera atención.\n\nOjalá algún día recorramos lugares nuevos juntos.\n\nMichael Alejandro"
     ]
 };
 
